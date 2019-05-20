@@ -1,5 +1,5 @@
-function makeNewSprite(animation, x, y) {
-  var spriteIndex = makeSpriteNative(x, y);
+function createNewSprite(name, animation, location) {
+  var spriteIndex = makeSpriteNative(animation, location.x, location.y);
   return spriteIndex;
 }
 
