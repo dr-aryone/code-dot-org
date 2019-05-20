@@ -2,6 +2,7 @@ import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
+var Spritelab = require('./Spritelab');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
@@ -145,6 +146,8 @@ GameLabP5.prototype.init = function(options) {
       arguments
     );
   }.bind(this);
+
+  this.spritelab = new Spritelab(this.p5);
 };
 
 /**
@@ -198,6 +201,7 @@ GameLabP5.prototype.startExecution = function() {
   new window.p5(
     function(p5obj) {
       this.p5 = p5obj;
+      this.spritelab.p5 = p5obj;
       // Tell p5.play that we don't want it to have Sprite do anything
       // within _syncAnimationSizes()
       this.p5._fixedSpriteAnimationFrameSizes = true;

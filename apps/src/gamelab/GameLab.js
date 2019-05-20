@@ -23,7 +23,6 @@ var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '../lib/util/timeoutList';
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
-var Spritelab = require('./Spritelab');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
@@ -118,7 +117,6 @@ var GameLab = function() {
   this.setupInProgress = false;
   this.reportPreloadEventHandlerComplete_ = null;
   this.gameLabP5 = new GameLabP5();
-  this.spritelab = new Spritelab(); // TODO(ajpal): if using blockly
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
   this.reportPerf =
