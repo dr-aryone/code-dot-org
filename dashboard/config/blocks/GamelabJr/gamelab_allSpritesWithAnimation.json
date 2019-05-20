@@ -1,10 +1,11 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "allSpritesWithAnimation",
+    "name": "allSpritesWithAnimation",
+    "simpleValue": true,
     "inline": false,
     "blockText": "{ANIMATION}",
-    "returnType": "Sprite",
+    "returnType": "String",
     "color": [
       355,
       ".7",
